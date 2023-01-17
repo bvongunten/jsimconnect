@@ -3,7 +3,6 @@ package flightsim.simconnect;
 import java.io.InputStream;
 import java.util.Properties;
 
-import javax.swing.JOptionPane;
 
 /**
  * Contains static reference to simconnect version number
@@ -36,15 +35,6 @@ public class Version {
 			return Integer.parseInt(val);
 		} catch (Exception e) {
 		}
-		return -1;	// fallback
-	}
-	
-	public static void main(String[] args) {
-		int bn = buildNumber();
-		String ver = VERSION_MAJOR + "." + VERSION_MINOR + " (" + PATCHLEVEL + ") build "  + bn + " proto " + SimConnectConstants.PROTO_VERSION;
-		System.out.println("JSimConnect " + ver);
-		JOptionPane.showMessageDialog(null, "JSimConnect " + ver, 
-				"JSimConnect",
-				JOptionPane.INFORMATION_MESSAGE);
+		return -1;    // fallback
 	}
 }

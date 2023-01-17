@@ -4,7 +4,6 @@ import java.util.*;
 import java.util.regex.Pattern;
 import java.io.*;
 
-import javax.swing.filechooser.FileSystemView;
 
 /**
  * Read and parse configuration files. First read in "My Documents" folder, then in the current directory
@@ -35,14 +34,7 @@ public class ConfigurationManager {
 				return;
 			} catch (IOException ioe) {}
 		
-		// home dir (my documents) on XP
-		f = new File(FileSystemView.getFileSystemView().getDefaultDirectory(), "SimConnect.cfg"); //$NON-NLS-1$
-		if (f.exists()) try {
-				parse(f);
-				inited = true;
-				return;
-			} catch (IOException ioe) {}
-		
+
 	}
 	
 	private static final Pattern HDR_PATTERN = Pattern.compile("^\\s*\\[SimConnect(.(\\d+))?\\].*", Pattern.CASE_INSENSITIVE); //$NON-NLS-1$

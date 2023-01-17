@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>flightsim</groupId>
     <artifactId>jsimconnect</artifactId>
-    <version>0.8.0</version>
+    <version>0.8.0-M</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>14</maven.compiler.source>
+        <maven.compiler.target>14</maven.compiler.target>
     </properties>
     <build>
     <resources>
@@ -25,8 +25,8 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.8.1</version>
             <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
+                <source>14</source>
+                <target>14</target>
             </configuration>
         </plugin>
     </plugins>
